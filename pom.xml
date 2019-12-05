@@ -6,7 +6,11 @@
 
     <groupId>big-data-demo</groupId>
     <artifactId>big-data-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>hive-demo</module>
+    </modules>
 
 
 </project>
