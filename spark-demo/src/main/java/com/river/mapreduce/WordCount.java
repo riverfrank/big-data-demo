@@ -19,8 +19,6 @@ public class WordCount {
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        String studentfilePaht = "/Users/riverfan/mytest/spark/mrAction/student.txt";
-        String scorefilePaht = "/Users/riverfan/mytest/spark/mrAction";
         String worldcount = "/Users/riverfan/mytest/spark/hello.txt";
         wordCount2(sc,worldcount);
 
