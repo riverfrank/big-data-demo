@@ -2,16 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>big-data-demo</artifactId>
+        <groupId>big-data-demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>big-data-demo</groupId>
-    <artifactId>big-data-demo</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>hive-demo</module>
-        <module>spark-demo</module>
-    </modules>
+    <artifactId>spark-demo</artifactId>
 
 
 </project>
