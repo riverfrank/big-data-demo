@@ -28,19 +28,9 @@ public class WordCount {
     }
 
     public static void wordCount2(JavaSparkContext sc, String filePaht) {
-
-        JavaRDD<String> stringJavaRDD = sc.textFile(filePaht)
-                .flatMap(s -> Arrays.asList(s.split(" ")).iterator());
-
         JavaPairRDD<String, Integer> rdd1 = sc.textFile(filePaht)
-                .flatMap(s -> {
-                    System.out.println("s = " + s);//s 是一行
-                    return Arrays.asList(s.split(" ")).iterator();
-                })
-                .mapToPair(s -> {
-                    System.out.println(Thread.currentThread());
-                    return new Tuple2<>(s, 1);
-                })
+                .flatMap(s -> Arrays.asList(s.split(" ")).iterator())
+                .mapToPair(s -> new Tuple2<>(s, 1))
                 .filter(t -> StringUtils.isNoneBlank(t._1) && !StringUtils.equals(t._1, ","))
                 .reduceByKey((v1, v2) -> (v1 + v2));
         rdd1.collect().forEach(t -> System.out.println(t + "  " + Thread.currentThread()));
