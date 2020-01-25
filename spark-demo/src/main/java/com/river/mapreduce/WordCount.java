@@ -9,6 +9,9 @@ import scala.Tuple2;
 
 import java.util.Arrays;
 
+/**
+ * @author riverfan
+ */
 public class WordCount {
     public static void main(String[] args) {
         System.out.println("hello");
