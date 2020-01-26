@@ -1,4 +1,4 @@
-package com.river.mapreduce;
+package com.river.example;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.spark.SparkConf;
