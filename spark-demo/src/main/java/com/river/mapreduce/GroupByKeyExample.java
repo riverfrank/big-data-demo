@@ -25,6 +25,6 @@ public class GroupByKeyExample {
                 .flatMap(s -> Arrays.asList(s.split(" ")).iterator())
                 .mapToPair(s -> new Tuple2<>(s, 1))
                 .groupByKey();
-        stringIterableJavaPairRDD.collect().forEach(t-> System.out.println(t._2));
+        stringIterableJavaPairRDD.collect().forEach(t-> System.out.println(t._1 +":"+ t._2));
     }
 }
